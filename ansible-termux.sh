@@ -22,10 +22,10 @@ yes | apt upgrade && \
 yes | apt install \
     build-essential \
     binutils \
-    python \
-    openssl \
     libsodium \
     libyaml \
+    openssl \
+    python \
     rust
 
 #pip list --outdated | \
@@ -34,5 +34,4 @@ yes | apt install \
 #    cut -d ' ' -f 1 | \
 #    xargs -n1 pip install --upgrade
 
-pip install --upgrade pynacl
-pip install --upgrade ansible
+pip install --upgrade pynacl ansible
