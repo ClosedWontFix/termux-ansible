@@ -17,6 +17,11 @@
 #
 #============================================================================#
 
+if [[ $(uname -o) != "Android" ]]; then
+  echo "This is not Android."
+  exit
+fi
+
 apt update && \
 yes | apt upgrade && \
 yes | apt install \
@@ -28,6 +33,11 @@ yes | apt install \
     python \
     rust
 
+if [[ $? -ne 0 ]]; then
+  echo "Prerequisite package installation failed."
+  exit
+fi
+
 #pip list --outdated | \
 #    grep -Ev '^(Package|-)' | \
 #    grep -vw resolvelib \
@@ -36,5 +46,10 @@ yes | apt install \
 
 pip install --upgrade pynacl ansible
 
-ansible --version
+if [[ $? -eq 0 ]]; then
+  echo -e "Ansible was installed successfully.  See output below.\n"
+  ansible --version
+else
+  echo "Ansible installation failed."
+fi
 
