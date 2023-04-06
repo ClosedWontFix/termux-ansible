@@ -1,4 +1,21 @@
 #!/data/data/com.termux/files/usr/bin/bash
+#
+#============================================================================#
+#
+# termux-ansible.sh
+#
+# Author: ClosedWontFix
+#     
+# This script is offered as reference only.
+# No warranty is expressed or implied.  
+# Use at your own risk.
+#
+# Description: Install Ansible on termux
+#
+# https://github.com/ansible/ansible
+# https://github.com/termux/termux-app
+#
+#============================================================================#
 
 apt update && \
 yes | apt upgrade && \
