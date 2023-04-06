@@ -34,7 +34,7 @@ yes | apt install \
     rust
 
 if [[ $? -ne 0 ]]; then
-  echo "Prerequisite package installation failed."
+  echo -e "\nPrerequisite package installation failed.\n"
   exit
 fi
 
@@ -47,9 +47,9 @@ fi
 pip install --upgrade pynacl ansible
 
 if [[ $? -eq 0 ]]; then
-  echo -e "Ansible was installed successfully.  See output below.\n"
+  echo -e "\nAnsible was installed successfully.  See output below.\n"
   ansible --version
 else
-  echo "Ansible installation failed."
+  echo -e "\nAnsible installation failed.\n"
 fi
 
