@@ -35,3 +35,6 @@ yes | apt install \
 #    xargs -n1 pip install --upgrade
 
 pip install --upgrade pynacl ansible
+
+ansible --version
+
