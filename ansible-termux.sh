@@ -44,7 +44,8 @@ fi
 #    cut -d ' ' -f 1 | \
 #    xargs -n1 pip install --upgrade
 
-pip install --upgrade pynacl ansible
+pip install --upgrade pynacl && \
+pip install --upgrade ansible
 
 if [[ $? -eq 0 ]]; then
   echo -e "\nAnsible was installed successfully.  See output below.\n"
