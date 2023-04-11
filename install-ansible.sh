@@ -2,9 +2,10 @@
 #
 #============================================================================#
 #
-# termux-ansible.sh
+# install-ansible.sh
 #
 # Author: ClosedWontFix
+# https://github.com/ClosedWontFix/termux-ansible
 #     
 # This script is offered as reference only.
 # No warranty is expressed or implied.  
