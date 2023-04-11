@@ -1,3 +1,11 @@
 = termux-ansible
 
 Install ansible on termux
+
+[source,bash]
+----
+cd ~
+curl https://raw.githubusercontent.com/ClosedWontFix/termux-ansible/master/install-ansible.sh -o install-ansible.sh
+chmod +x install-ansible.sh
+./install-ansible.sh
+----
